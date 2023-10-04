@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<h2>Книги</h2>
+
+<ul>
+    {% for book in books %}
+    <li>
+
+        <a href="{% url 'detail' book.id %}">{{ book.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
